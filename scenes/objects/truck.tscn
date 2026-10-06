@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dnig51wwncg50"]
+
+[ext_resource type="PackedScene" uid="uid://3lbbe5nxoy0a" path="res://assets/models/map/truck.glb" id="1_kb82c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1gu6w"]
+size = Vector3(1.5878906, 0.5824585, 2.6520996)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w8s7m"]
+size = Vector3(1.3486328, 0.42773438, 0.7192383)
+
+[node name="Truck" type="StaticBody3D" unique_id=2139493575]
+
+[node name="truck" parent="." unique_id=1723244566 instance=ExtResource("1_kb82c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1882571, -1.1920929e-07, -0.10284567)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1484505677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20605469, 0.62020874, -0.19104004)
+shape = SubResource("BoxShape3D_1gu6w")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1398325175]
+transform = Transform3D(1, 0, 0, 0, 1.086975, 0, 0, 0, 1.2350159, 0.1743164, 1.0764534, 0.12135875)
+shape = SubResource("BoxShape3D_w8s7m")
